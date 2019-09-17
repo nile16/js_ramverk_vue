@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Me from '@/components/Me'
-import Report from '@/components/Report'
+import Week from '@/components/Week'
 
 Vue.use(Router)
 
@@ -13,9 +13,9 @@ export default new Router({
         component: Me
     },
     {
-        path: '/report/:kmom',
+        path: '/week/:kmom',
         name: 'Redovisning',
-        component: Report
+        component: Week
     }
   ]
 })
