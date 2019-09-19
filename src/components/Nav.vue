@@ -2,8 +2,7 @@
 <nav>
     <ul>
         <li><router-link to="/">Me</router-link></li>
-        <li><router-link to="/week/1">kmom01</router-link></li>
-        <li><router-link to="/week/2">kmom02</router-link></li>
+        <li><router-link to="/reports/week/1">kmom01</router-link></li>
     </ul>
 </nav>
 </template>

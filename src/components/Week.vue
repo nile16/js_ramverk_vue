@@ -2,7 +2,7 @@
 <main>
     <Nav />
     <h2>Kmom0{{ $route.params.kmom }}</h2>
-    <p>{{ text }}</p>
+    <span v-html="text">{{ text }}</span>
 </main>
 
 </template>
@@ -27,8 +27,18 @@ export default {
     getText(kmom) {
       let that = this;
       let texts = [
-        `Hoppsan`,
-        `Hejsan`
+          `<h3>Project setup</h3>
+           npm install<br><br>
+           <h3>Compiles and hot-reloads for development</h3>
+           npm run serve<br><br>
+           <h3>Compiles and minifies for production</h3>
+           npm run build<br><br>
+           <h3>Run your tests</h3>
+           npm run test<br><br>
+           <h3>Lints and fixes files</h3>
+           npm run lint<br><br>
+           <h3><a href="https://github.com/nile16/js_ramverk_vue">Github</a></h3>`,
+          `kmom02 test`
       ];
 
       that.text = texts[Number(kmom)-1];

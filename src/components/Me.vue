@@ -35,8 +35,6 @@ export default {
           i Karlshamn men bytte till Webbprogrammering för jag eftersökte mer
           fokus på programmering och trodde i min enfald att Webbprogrammering
           i Karlskrona var det jag sökte.
-          Det visade sig helt fel. Webbprogrammering i Karlskrona är nästan lika
-          mycket flum som Webbteknologier i Karlshamn. Nästan bara ramverk och skit.
           Jag har webbprogrammerat lite som hobby innan jag började på BTH.
           En yrkesbakgrund från telekom och Teknisk linje från gymnasiet finns i mitt bagage.
       `;

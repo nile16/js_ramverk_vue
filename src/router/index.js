@@ -13,7 +13,7 @@ export default new Router({
         component: Me
     },
     {
-        path: '/week/:kmom',
+        path: '/reports/week/:kmom',
         name: 'Redovisning',
         component: Week
     }
