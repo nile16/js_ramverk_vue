@@ -23,29 +23,102 @@ export default {
 html {
     font-size: 100%;
     font-family: 'Inter UI', sans-serif;
+    background-color: #0074d9;
 }
 
 .app {
-    width: 62em;
+    width: 100%;
     margin: 0 auto;
-    padding: 2em 6em 8em;
+    padding: 1em 1em 1em;
     background-color: #0074d9;
-    border-top: 4px solid #0be6d7;
     color: white;
 }
 
 h1 {
-    font-size: 8em;
-    font-weight: 100;
+    font-size: 4em;
+    font-weight: normal;
+    padding: 10px 0px;
 }
 
 h2 {
-    font-size: 6em;
-    font-weight: 100;
+    font-size: 3em;
+    font-weight: normal;
 }
 
 p {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: normal;
 }
+
+.input-label {
+    width: 100%;
+    display: inline-block;
+}
+
+.input-field {
+    width: 100%;
+    color: #0074d9;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.input-submit {
+    width: 100%;
+    color: #0074d9;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#datePicker {
+    display: none;
+    justify-content: flex-start;
+    flex-wrap: wrap ;
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #0074d9;
+}
+
+.datePicker-header {
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.datePicker-decade {
+    display: inline-block;
+    width: 33%;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.datePicker-year {
+    display: inline-block;
+    width: 20%;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.datePicker-month {
+    display: inline-block;
+    width: 33%;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.datePicker-date {
+    display: inline-block;
+    width: 12%;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+    .app {
+        width: 640px;
+    }
+}
+
 </style>
