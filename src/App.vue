@@ -69,7 +69,7 @@ p {
     font-weight: bold;
 }
 
-#datePicker {
+#date-picker {
     display: none;
     justify-content: flex-start;
     flex-wrap: wrap ;

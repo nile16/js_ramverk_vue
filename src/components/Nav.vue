@@ -2,9 +2,18 @@
 <nav>
     <ul>
         <li><router-link to="/">Me</router-link></li>
+        <li><router-link to="/login">Login</router-link></li>
+        <li><router-link to="/reg">Registrera</router-link></li>
+        <li><router-link to="/write">Editera</router-link></li>
+        <li><router-link to="/logout">Logout</router-link></li>
+    </ul>
+    <ul>
         <li><router-link to="/reports/week/1">kmom01</router-link></li>
         <li><router-link to="/reports/week/2">kmom02</router-link></li>
-        <li><router-link to="/reports/Reg">Registrera</router-link></li>
+        <li><router-link to="/reports/week/3">kmom03</router-link></li>
+        <li><router-link to="/reports/week/4">kmom04</router-link></li>
+        <li><router-link to="/reports/week/5">kmom05</router-link></li>
+        <li><router-link to="/reports/week/6">kmom06</router-link></li>
     </ul>
 </nav>
 </template>

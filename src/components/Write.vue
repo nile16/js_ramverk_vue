@@ -1,32 +1,27 @@
 <template>
 <main>
     <Nav />
-    <h1>Registrering</h1>
-    <p>Registrering kommer att ge dig framtida möjlighet att redigera redovisingstexterna.</p><br><br>
+    <h1>Editera Rapport</h1>
 
-    <div id="messageDiv"></div>
-
-    <form id="register-form">
-        <label class="input-label">Namn<br>
-            <input id="name-field" class="input-field" type="text" minlength="2" required><br><br>
+    <form id="report-form">
+        <label class="input-label">Kmom<br>
+            <select id="week-field" class="input-field" type="select" required>
+              <option value="0" disabled selected hidden>Välj kmom</option>
+              <option value="1">Kmom1</option>
+              <option value="2">Kmom2</option>
+              <option value="3">Kmom3</option>
+              <option value="4">Kmom4</option>
+              <option value="5">Kmom5</option>
+              <option value="6">Kmom6</option>
+             </select>
+              <br><br>
         </label><br>
 
-        <label class="input-label">Födelsedatum<br>
-                <input id="birth-field" class="input-field" v-on:click.stop="getBirthDate" type="text" required>
-        </label>
-        <div id="date-picker"></div><br><br>
-
-        <label class="input-label">E-post<br>
-            <input id="email-field" class="input-field" type="email" required><br><br>
+        <label class="input-label">Rapport<br>
+            <textarea id="report-field" class="input-field" rows="20" cols="30"></textarea><br><br>
         </label><br>
 
-        <label class="input-label">Lösenord (minst 8 tecken, varav minst en siffra, minst en stor och minst en liten bokstav).<br>
-            <input id="password-field" class="input-field" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br><br>
-        </label><br>
-
-        <input type="checkbox" v-on:click="togglePassWordVisiblity()">&nbsp;Visa lösenord<br><br><br>
-
-        <input type="submit" class="input-submit" value="Registrera"><br><br>
+        <input type="submit" class="input-submit" value="Spara"><br><br>
     </form>
 </main>
 
@@ -46,9 +41,17 @@ export default {
   },
   mounted() {
       let that = this;
-      document.getElementById('register-form').addEventListener("submit",function(e) {
+
+      if(!localStorage.getItem('user-token')) {
+          that.$router.push('/login');
+      }
+
+      document.getElementById('week-field').onchange = (event) => {
+          that.getReport(event.target.value);
+      }
+      document.getElementById('report-form').addEventListener("submit",function(e) {
           e.preventDefault();
-          that.sendRegister();
+          that.sendReport();
       });
   },
   methods: {
@@ -60,14 +63,22 @@ export default {
           x.type = "password";
         }
       },
-      sendRegister: function() {
-          let name = document.getElementById('name-field').value;
-          let birth = document.getElementById('birth-field').value;
-          let email = document.getElementById('email-field').value;
-          let password = document.getElementById('password-field').value;
-          let that = this;
+      getReport: function(week) {
+          if (week != "0") {
+              fetch('https://me-api.nile16.me/reports/week' + week).then(function(response) {
+                  return response.json();
+              }).then(function(data) {
+                  document.getElementById('report-field').value = data.report;
+              })
+          } else {
+              document.getElementById('report-field').value = "";
+          }
+      },
+      sendReport: function() {
+          let week = document.getElementById('week-field').value;
+          let report = document.getElementById('report-field').value;
 
-          fetch('https://me-api.nile16.me/register', {
+          fetch('https://me-api.nile16.me/reports', {
               method: 'post',
               cache: 'no-cache',
               headers: {
@@ -75,23 +86,11 @@ export default {
               },
               body: JSON.stringify(
                   {
-                      name: name,
-                      birth: birth,
-                      email: email,
-                      password: password
+                      token: localStorage.getItem('user-token'),
+                      week: week,
+                      report: report
                   }
                 )
-          }).then(function(response) {
-              return response.json();
-          }).then(function(data) {
-              if (!data.error) {
-                  that.$router.push('/login');
-              } else {
-                  if (data.error=="Email exist")
-                      document.getElementById('messageDiv').innerHTML = "<h3>E-posten finns redan registrerad</h3><br>";
-                  else
-                      document.getElementById('messageDiv').innerHTML = "<h3>Registrering misslyckades</h3><br>";
-              }
           });
       },
       getBirthDate: function() {
