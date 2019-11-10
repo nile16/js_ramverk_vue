@@ -20,6 +20,25 @@ export default {
     box-sizing: border-box;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: block;
+    margin-right: 1em;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4em;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
 html {
     font-size: 100%;
     font-family: 'Inter UI', sans-serif;
@@ -35,19 +54,25 @@ html {
 }
 
 h1 {
-    font-size: 4em;
+    font-size: 2.5em;
     font-weight: normal;
     padding: 10px 0px;
 }
 
 h2 {
-    font-size: 3em;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.5em;
     font-weight: normal;
 }
 
 p {
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: normal;
+    margin-bottom: 1em;
 }
 
 .input-label {
@@ -118,6 +143,10 @@ p {
 @media only screen and (min-width: 640px) {
     .app {
         width: 640px;
+    }
+
+    nav li {
+        display: inline-block;
     }
 }
 
