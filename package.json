@@ -1,8 +1,10 @@
 {
   "name": "me-vue",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "scripts": {
+    "start": "node node_modules/http-server/bin/http-server -p 8082 dist",
+    "test": "mocha test/**/*.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -19,7 +21,10 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "http-server": "^0.11.1",
+    "mocha": "^6.2.2",
     "raw-loader": "^3.1.0",
+    "selenium-webdriver": "^4.0.0-alpha.5",
     "vue-template-compiler": "^2.5.17"
   },
   "eslintConfig": {
@@ -45,5 +50,20 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nile16/js_ramverk_vue.git"
+  },
+  "author": "Nils Leandersson (nile16)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nile16/js_ramverk_vue/issues"
+  },
+  "homepage": "https://github.com/nile16/js_ramverk_vue#readme"
 }
