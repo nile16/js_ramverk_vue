@@ -1,7 +1,7 @@
 <template>
 <main>
     <Nav />
-    <h1>Kmom0{{ $route.params.kmom }}</h1>
+    <h1>Kmom{{ $route.params.kmom }}</h1>
     <span v-html="text">{{ text }}</span>
 </main>
 

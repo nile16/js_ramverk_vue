@@ -21,7 +21,7 @@
             <textarea id="report-field" class="input-field" rows="20" cols="30"></textarea><br><br>
         </label><br>
 
-        <input type="submit" class="input-submit" value="Spara"><br><br>
+        <input type="submit" id="submit" class="input-submit" value="Spara"><br><br>
     </form>
 </main>
 
