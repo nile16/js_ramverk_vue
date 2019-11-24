@@ -3,8 +3,11 @@
   "version": "4.0.0",
   "private": true,
   "scripts": {
-    "start": "node node_modules/http-server/bin/http-server -p 8082 dist",
-    "test": "npm run start & mocha test/mocha.js",
+    "start": "node node_modules/http-server/bin/http-server -s -p 8082 dist",
+    "stop": "killall node",
+    "pretest": "npm run build; npm run start &",
+    "test": "mocha test/mocha.js; npm run lint",
+    "posttest": "npm stop",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
