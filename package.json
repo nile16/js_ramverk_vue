@@ -6,7 +6,7 @@
     "start": "node node_modules/http-server/bin/http-server -s -p 8082 dist",
     "stop": "killall node",
     "pretest": "npm run build; npm run start &",
-    "test": "mocha test/mocha.js; npm run lint",
+    "test": "npm run lint; mocha test/mocha.js",
     "posttest": "npm stop",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
