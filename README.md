@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/nile16/js_ramverk_vue.svg?branch=master)](https://travis-ci.com/nile16/js_ramverk_vue)
+
+
 # me-vue
 
 ## Project setup
