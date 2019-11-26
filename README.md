@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.com/nile16/js_ramverk_vue.svg?branch=master)](https://travis-ci.com/nile16/js_ramverk_vue)
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nile16/js_ramverk_vue/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nile16/js_ramverk_vue/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/nile16/js_ramverk_vue/badges/build.png?b=master)](https://scrutinizer-ci.com/g/nile16/js_ramverk_vue/build-status/master)
 
 # me-vue
 
