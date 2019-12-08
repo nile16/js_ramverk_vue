@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Me from '@/components/Me'
+import Chat from '@/components/Chat'
 import Week from '@/components/Week'
 import Reg from '@/components/Reg'
 import Login from '@/components/Login'
@@ -15,6 +16,11 @@ export default new Router({
         path: '/',
         name: 'Me',
         component: Me
+    },
+    {
+        path: '/chat',
+        name: 'Chatt',
+        component: Chat
     },
     {
         path: '/reports/week/:kmom',

@@ -2,6 +2,7 @@
 <nav>
     <ul>
         <li><router-link to="/">Me</router-link></li>
+        <li><router-link to="/chat">Chatt</router-link></li>
         <li><router-link to="/login">Login</router-link></li>
         <li><router-link to="/reg">Registrera</router-link></li>
         <li><router-link to="/write">Editera</router-link></li>

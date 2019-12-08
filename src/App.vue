@@ -140,6 +140,24 @@ p {
     text-align: center;
 }
 
+#chat-field {
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+    color: #0074d9;
+    font-size: 1em;
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background-color: #ffffff;
+    padding: 5px 5px;
+}
+
+#chatDiv {
+    display: none
+}
+
+
 @media only screen and (min-width: 640px) {
     .app {
         width: 640px;
